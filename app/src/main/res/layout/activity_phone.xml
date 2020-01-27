@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cardview_dark_background"
+    tools:context=".PhoneActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:textColor="#ffffff"
+        android:layout_marginTop="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手机号"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp" />
+
+    <net.rimoto.intlphoneinput.IntlPhoneInput
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        app:textSize="14sp"
+        app:textColor="#ffffff"
+        app:flagPaddingEnd="4dp"
+        app:flagPaddingStart="4dp"
+        app:flagPaddingTop="4dp"
+        app:flagPaddingBottom="4dp"
+        android:id="@+id/my_phone_input"
+        android:layout_marginStart="50dp" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/shape"
+        android:onClick="PhoneCheck"
+        android:text="获取验证码"
+        android:textColor="#ffffff" />
+</LinearLayout>

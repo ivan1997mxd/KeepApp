@@ -46,25 +46,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp"
-        android:gravity="center_horizontal">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+        <ImageButton
+            android:layout_marginLeft="55dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:id="@+id/btn_weChat"
+            android:src="@mipmap/u413"
+            android:scaleType="fitCenter"
+            android:background="@drawable/shape2"
             />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_QQ"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_weiBo"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_FaceBook"/>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_QQ"
+            android:layout_marginLeft="30dp"
+            android:src="@mipmap/u414"
+            android:scaleType="fitCenter"
+            android:background="@drawable/shape2"
+            />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_weiBo"
+            android:layout_marginLeft="30dp"
+            android:src="@mipmap/u415"
+            android:scaleType="fitCenter"
+            android:background="@drawable/shape2"
+            />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_faceBook"
+            android:layout_marginLeft="30dp"
+            android:src="@mipmap/u416"
+            android:scaleType="fitCenter"
+            android:background="@drawable/shape2"
+            />>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">KeepApp</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_fitness">训练</string>
+    <string name="title_discover">发现</string>
+    <string name="title_share">动态</string>
+    <string name="title_my">我</string>
 </resources>

@@ -3,23 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_fitness">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.chentong.keepapp.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_fitness"
+        android:name="com.chentong.keepapp.ui.fitness.FitnessFragment"
+        android:label="@string/title_fitness"
+        tools:layout="@layout/fragment_fitness" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.chentong.keepapp.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_discover"
+        android:name="com.chentong.keepapp.ui.discover.DiscoverFragment"
+        android:label="@string/title_discover"
+        tools:layout="@layout/fragment_discover" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.chentong.keepapp.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_share"
+        android:name="com.chentong.keepapp.ui.share.ShareFragment"
+        android:label="@string/title_share"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/navigation_my"
+        android:name="com.chentong.keepapp.ui.my.MyFragment"
+        android:label="@string/title_my" />
+
+
 </navigation>

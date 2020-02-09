@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/exercise_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="">
+    android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/main_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:divider="@drawable/divider"
@@ -153,6 +153,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/body_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp">
@@ -170,6 +171,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_alignParentRight="true"
+                android:clickable="true"
                 android:src="@drawable/ic_close_black_24dp" />
 
 
@@ -257,12 +259,14 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/ic_u658" />
+
             <TextView
                 android:id="@+id/activity_1_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/my_activity_1"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
                 android:text="亚洲明星导师的街舞入门课"
                 android:textSize="12sp" />
 
@@ -284,13 +288,15 @@
                 android:layout_marginTop="20dp"
                 android:layout_toRightOf="@id/my_activity_1"
                 android:src="@drawable/ic_u658" />
+
             <TextView
                 android:id="@+id/activity_2_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/my_activity_2"
-                android:layout_toRightOf="@id/activity_1_title"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/activity_1_title"
                 android:text="美赞3周年，等你来表白"
                 android:textSize="12sp" />
         </RelativeLayout>
@@ -307,37 +313,42 @@
                 android:layout_marginLeft="10dp"
                 android:text="我的训练"
                 android:textSize="14sp" />
+
             <LinearLayout
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/exercise_my_title"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:orientation="vertical"
-                android:background="#C0BCBC">
+                android:layout_below="@+id/exercise_my_title"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="#C0BCBC"
+                android:orientation="vertical">
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/exercise_my_1_title"
-                    android:text="2分钟体验课程"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/exercise_my_1_content"
-                    android:text="还未进行过训练   3人正在练"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:text="2分钟体验课程"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/exercise_my_1_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="还未进行过训练   3人正在练" />
 
             </LinearLayout>
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp">
+
             <TextView
                 android:id="@+id/meizan_recommand_titile"
                 android:layout_width="wrap_content"
@@ -361,19 +372,22 @@
                 android:layout_below="@id/meizan_recommand_titile"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/ic_u668" />
+
             <ImageView
                 android:id="@+id/meizan_recommand_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/meizan_recommand_1"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/ic_u668"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_u668" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp">
+
             <TextView
                 android:id="@+id/action_titile"
                 android:layout_width="wrap_content"
@@ -381,6 +395,7 @@
                 android:layout_marginLeft="10dp"
                 android:text="动作训练区"
                 android:textSize="14sp" />
+
             <ImageView
                 android:id="@+id/action_forward"
                 android:layout_width="30dp"
@@ -388,6 +403,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
             <ImageView
                 android:id="@+id/action_1"
                 android:layout_width="wrap_content"
@@ -396,20 +412,23 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/ic_u658" />
+
             <ImageView
                 android:id="@+id/action_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/action_1"
                 android:layout_below="@id/action_titile"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/action_1"
                 android:src="@drawable/ic_u658" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp">
+
             <TextView
                 android:id="@+id/course_titile"
                 android:layout_width="wrap_content"
@@ -417,6 +436,7 @@
                 android:layout_marginLeft="10dp"
                 android:text="新课程训练"
                 android:textSize="14sp" />
+
             <ImageView
                 android:id="@+id/course_forward"
                 android:layout_width="30dp"
@@ -424,6 +444,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
             <ImageView
                 android:id="@+id/course_1"
                 android:layout_width="wrap_content"
@@ -432,16 +453,18 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/ic_u849" />
+
             <ImageView
                 android:id="@+id/course_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/course_1"
                 android:layout_below="@id/course_titile"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/course_1"
                 android:src="@drawable/ic_u849" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -449,15 +472,15 @@
 
             <ImageView
                 android:id="@+id/discover_more"
-                android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:src="@drawable/ic_u859" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp">
-        </RelativeLayout>
+            android:layout_height="60dp"></RelativeLayout>
 
     </LinearLayout>
 

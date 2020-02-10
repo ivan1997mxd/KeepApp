@@ -61,8 +61,8 @@ public class ShareFragment extends Fragment {
 
         ViewPager viewPager = root.findViewById(R.id.view_page_2);
         list.add(new HotFragment());
-        list.add(new HangoutFragment());
         list.add(new ScribeFragment());
+        list.add(new HangoutFragment());
         MyAdapter myAdapter = new MyAdapter(getFragmentManager());
         viewPager.setAdapter(myAdapter);
         TabLayout tabLayout = root.findViewById(R.id.tab_layout_2);

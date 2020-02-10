@@ -24,17 +24,14 @@ import java.util.List;
 
 public class FitnessFragment extends Fragment{
 
-    private FitnessViewModel fitnessViewModel;
-    private ViewPager viewPager;
     private List<Fragment> list = new ArrayList<>();
     private String[] titles = {"训练","跑步","行走","骑行"};
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        fitnessViewModel =
-                ViewModelProviders.of(this).get(FitnessViewModel.class);
+        FitnessViewModel fitnessViewModel = ViewModelProviders.of(this).get(FitnessViewModel.class);
         View root = inflater.inflate(R.layout.fragment_fitness, container, false);
-        viewPager = root.findViewById(R.id.view_page);
+        ViewPager viewPager = root.findViewById(R.id.view_page);
         list.add(new ExerciseFragment());
         list.add(new RunFragment());
         list.add(new WalkFragment());

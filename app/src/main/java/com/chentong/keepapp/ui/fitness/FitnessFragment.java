@@ -1,10 +1,15 @@
 package com.chentong.keepapp.ui.fitness;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -17,6 +22,7 @@ import com.chentong.keepapp.ui.fitness.tabs.BikeFragment;
 import com.chentong.keepapp.ui.fitness.tabs.ExerciseFragment;
 import com.chentong.keepapp.ui.fitness.tabs.RunFragment;
 import com.chentong.keepapp.ui.fitness.tabs.WalkFragment;
+import com.chentong.keepapp.ui.my.SettingActivity;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -31,6 +37,20 @@ public class FitnessFragment extends Fragment{
                              ViewGroup container, Bundle savedInstanceState) {
         FitnessViewModel fitnessViewModel = ViewModelProviders.of(this).get(FitnessViewModel.class);
         View root = inflater.inflate(R.layout.fragment_fitness, container, false);
+        final ActionBar actionBar = ((AppCompatActivity)getActivity()).getSupportActionBar();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setCustomView(R.layout.actionbar_layout);
+        TextView barText = actionBar.getCustomView().findViewById(R.id.bar_text);
+        barText.setText("训练");
+        ImageView barBtn1 = actionBar.getCustomView().findViewById(R.id.bar_btn_2);
+        barBtn1.setImageResource(R.drawable.ic_search_black_24dp);
+        barBtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SearchActivity.class);
+                startActivity(intent);
+            }
+        });
         ViewPager viewPager = root.findViewById(R.id.view_page);
         list.add(new ExerciseFragment());
         list.add(new RunFragment());

@@ -44,6 +44,13 @@ public class MyFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        barBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), NotificationActivity.class);
+                startActivity(intent);
+            }
+        });
         return root;
     }
 }

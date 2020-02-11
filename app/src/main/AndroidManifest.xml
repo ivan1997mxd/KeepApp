@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.my.SettingActivity"></activity>
+        <activity android:name=".ui.my.NotificationActivity"></activity>
+        <activity android:name=".ui.fitness.SearchActivity" />
+        <activity android:name=".ui.my.SettingActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity android:name=".GuideActivity" />
         <activity android:name=".PhoneRegisterActivity" />
         <activity android:name=".RegisterActivity" />

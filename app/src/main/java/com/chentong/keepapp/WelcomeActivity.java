@@ -16,7 +16,7 @@ public class WelcomeActivity extends AppCompatActivity implements Animation.Anim
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        ImageView welcomeImg = (ImageView) findViewById(R.id.welcomeImg);
+//        ImageView welcomeImg = (ImageView) findViewById(R.id.welcomeImg);
         final Intent intent = new Intent(this, GuideActivity.class);
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {

@@ -6,12 +6,31 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="#363636"
     tools:context=".WelcomeActivity">
 
-    <ImageView
+    <RelativeLayout
         android:id="@+id/welcomeImg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@mipmap/ic_launcher"/>
+        android:layout_height="500dp"
+        >
+
+        <TextView
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="科学运动\n让生活更美好"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="美赞体育"/>
 
 </LinearLayout>
